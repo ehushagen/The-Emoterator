@@ -21,6 +21,7 @@ ezButton button5(33);
 ezButton button6(32);
 ezButton button7(23);
 ezButton EnterButton(12);
+// ezButton BackspaceButton(XX);
 
 void setup() {
   Serial.begin(115200);
@@ -64,5 +65,7 @@ void loop() {
       bleKeyboard.print(ButtonSevenText);
     if (EnterButton.isPressed())
       bleKeyboard.write(KEY_RETURN);
+//    if (BackspaceButton.isPressed())
+//      bleKeyboard.write(KEY_BACKSPACE);
   }
 }
