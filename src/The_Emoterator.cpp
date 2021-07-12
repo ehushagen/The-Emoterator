@@ -58,7 +58,7 @@ void setup() {
   BackspaceButton.setDebounceTime(50);
 
   bleKeyboard.begin();
-  bleKeyboard.setBatteryLevel(69);
+  bleKeyboard.setBatteryLevel(69); // nice
 }
 
 void loop() {
