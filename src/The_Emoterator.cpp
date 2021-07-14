@@ -1,6 +1,6 @@
 
 #include <BleKeyboard.h> // https://github.com/T-vK/ESP32-BLE-Keyboard
-#include <ezButton.h> // https://arduinogetstarted.com/tutorials/arduino-button-library
+#include <ezButton.h>    // https://arduinogetstarted.com/tutorials/arduino-button-library
 
 #define ButtonOneText "prawnzGG "
 #define ButtonTwoText "prawnzGL "
@@ -37,7 +37,8 @@ ezButton button14(16);
 ezButton EnterButton(12);
 ezButton BackspaceButton(19);
 
-void setup() {
+void setup()
+{
   Serial.begin(115200);
   //  Serial.println("Starting BLE work!");
   button1.setDebounceTime(50);
@@ -61,7 +62,8 @@ void setup() {
   bleKeyboard.setBatteryLevel(69); // nice
 }
 
-void loop() {
+void loop()
+{
   button1.loop();
   button2.loop();
   button3.loop();
@@ -79,37 +81,53 @@ void loop() {
   EnterButton.loop();
   BackspaceButton.loop();
 
-  if (bleKeyboard.isConnected()) {
+  if (bleKeyboard.isConnected())
+  {
     if (button1.isPressed())
       bleKeyboard.print(ButtonOneText);
+
     if (button2.isPressed())
       bleKeyboard.print(ButtonTwoText);
+
     if (button3.isPressed())
       bleKeyboard.print(ButtonThreeText);
+
     if (button4.isPressed())
       bleKeyboard.print(ButtonFourText);
+
     if (button5.isPressed())
       bleKeyboard.print(ButtonFiveText);
+
     if (button6.isPressed())
       bleKeyboard.print(ButtonSixText);
+
     if (button7.isPressed())
       bleKeyboard.print(ButtonSevenText);
+
     if (button8.isPressed())
       bleKeyboard.print(ButtonEightText);
+
     if (button9.isPressed())
       bleKeyboard.print(ButtonNineText);
+
     if (button10.isPressed())
       bleKeyboard.print(ButtonTenText);
+
     if (button11.isPressed())
       bleKeyboard.print(ButtonElevenText);
+
     if (button12.isPressed())
       bleKeyboard.print(ButtonTwelveText);
+
     if (button13.isPressed())
       bleKeyboard.print(ButtonThirteenText);
+
     if (button14.isPressed())
       bleKeyboard.print(ButtonFourteenText);
+
     if (EnterButton.isPressed())
       bleKeyboard.write(KEY_RETURN);
+
     if (BackspaceButton.isPressed())
       bleKeyboard.write(KEY_BACKSPACE);
   }
