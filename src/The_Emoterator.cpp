@@ -15,7 +15,7 @@
 #define ButtonElevenText "prawnzGasm "
 #define ButtonTwelveText "prawnzAYAYAShake "
 #define ButtonThirteenText "ConcernFroge "
-#define ButtonFourteenText "hatchlRocky "
+#define ButtonFourteenText "RydiaCozy "
 
 //Set the name of the bluetooth keyboard
 BleKeyboard bleKeyboard("The Emoterator");
